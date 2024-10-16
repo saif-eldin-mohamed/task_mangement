@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "556490389750",
+    "project_id": "taskmangment-fdfc4",
+    "storage_bucket": "taskmangment-fdfc4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:556490389750:android:8089c1478db7d0ff1394d7",
+        "android_client_info": {
+          "package_name": "com.example.task_mangment"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCd7aAjE22WA8QG7leYJwr56gUnf9He5oo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
