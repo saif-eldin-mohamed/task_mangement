@@ -1,19 +1,19 @@
 class TaskModel {
-  final String id;
+  final String? id;
   final String title;
   final String date;
   final bool isDone;
 
   const TaskModel({
-    required this.id,
+     this.id,
     required this.title,
     required this.date,
     required this.isDone,
   });
 
-  factory TaskModel.fromJson(Map<String, dynamic> json, String id) {
+  factory TaskModel.fromJson(Map<String, dynamic> json,) {
     return TaskModel(
-      id: id,
+      id: json['id']??'' ,
       title: json['title'] ?? '',
       date: json['date'] ?? '',
       isDone: json['isDone'] ?? false,
@@ -22,9 +22,23 @@ class TaskModel {
 
   Map<String, dynamic> toJson() {
     return {
+      'id': id,
       'title': title,
       'date': date,
       'isDone': isDone,
     };
+  }
+  TaskModel copyWith({
+    String? id,
+    String? title,
+    String? date,
+    bool? isDone,
+  }) {
+    return TaskModel(
+      id: id ?? this.id, 
+      title: title ?? this.title,
+      date: date ?? this.date,
+      isDone: isDone ?? this.isDone,
+    );
   }
 }
